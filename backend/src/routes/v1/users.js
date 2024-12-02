@@ -167,12 +167,21 @@ router.post('/:userId/recentlyViewed', authenticateUser, async (req, res) => {
           transaction.delete(recentlyViewedRef.doc(oldestDocId));
         }
 
-        transaction.add(recentlyViewedRef, {
-          productId,
-          name,
-          timestamp: admin.firestore.FieldValue.serverTimestamp(),
-          viewCount: 1
-        });
+        if(process.env.NODE_ENV == "development"){
+          transaction.add(recentlyViewedRef, {
+            productId,
+            name,
+            timestamp: admin.firestore.FieldValue.serverTimestamp(),
+            viewCount: 1
+          });
+        } else {
+          transaction.set(recentlyViewedRef.doc(), {
+            productId,
+            name,
+            timestamp: admin.firestore.FieldValue.serverTimestamp(),
+            viewCount: 1
+          });
+        }
       }
     });
 

@@ -1,0 +1,29 @@
+{
+  "name": "recently-viewed-products",
+  "version": "1.0.0",
+  "description": "User profile with recently viewed products",
+  "main": "src/server.js",
+  "scripts": {
+    "start": "node src/server.js",
+    "dev": "nodemon src/server.js",
+    "test": "jest",
+    "test:unit": "jest src/tests/unit.test.js",
+    "test:integration": "jest src/tests/integration.test.js"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^10.0.0",
+    "express": "^4.17.1",
+    "firebase-admin": "^9.12.0",
+    "nodemailer": "^6.6.3",
+    "redis": "^3.1.2",
+    "swagger-ui-express": "^4.1.6",
+    "winston": "^3.3.3",
+    "yamljs": "^0.3.0"
+  },
+  "devDependencies": {
+    "jest": "^27.0.6",
+    "nodemon": "^2.0.12",
+    "supertest": "^6.1.6"
+  }
+}

@@ -1,5 +1,5 @@
 {
-  "name": "recently-viewed-products",
+  "name": "new-liver-backend",
   "version": "1.0.0",
   "description": "User profile with recently viewed products",
   "main": "src/server.js",

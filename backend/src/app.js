@@ -5,7 +5,14 @@ const cors = require('cors');
 const swaggerDocument = YAML.load('./swagger.yaml');
 
 const app = express();
-app.use(cors());
+
+const corsOptions = {
+  origin: '*',
+  methods: 'GET, POST, PUT, DELETE, OPTIONS',
+  allowedHeaders: 'Content-Type, Authorization',
+};
+
+app.use(cors(corsOptions));
 const v1Routes = require('./routes/v1');
 
 app.use(express.json());

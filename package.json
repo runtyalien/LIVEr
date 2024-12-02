@@ -1,0 +1,24 @@
+{
+  "name": "new-liver",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "install": "npm run install:frontend && npm run install:backend",
+    "install:frontend": "cd frontend && npm install",
+    "install:backend": "cd backend && npm install",
+    "start": "npm run start:frontend & npm run start:backend",
+    "start:frontend": "cd frontend && npm start",
+    "start:backend": "cd backend && npm start"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/runtyalien/LIVEr.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/runtyalien/LIVEr/issues"
+  },
+  "homepage": "https://github.com/runtyalien/LIVEr#readme"
+}

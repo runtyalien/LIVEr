@@ -1,9 +1,8 @@
 {
-  "name": "recently-viewed-products-frontend",
+  "name": "new-liver-frontend",
   "version": "1.0.0",
   "private": true,
   "dependencies": {
-    "@material-ui/core": "^4.12.3",
     "axios": "^0.21.1",
     "firebase": "^9.1.0",
     "react": "^18.3.1",

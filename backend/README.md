@@ -39,11 +39,11 @@ This is the backend part of code designed to track and manage product views of a
 | Technology  | Purpose |
 |-----------|---------|
 | Node.js | Runtime Environment |
-| Express.js | 4.x | Web Framework |
-| Firebase Admin | Latest | Authentication & Database |
-| Redis | Latest | Caching Layer |
-| Winston | Latest | Logging |
-| Jest | Latest | Testing Framework |
+| Express.js | Web Framework |
+| Firebase Admin | Authentication & Database |
+| Redis | Caching Layer |
+| Winston | Logging |
+| Jest | Testing Framework |
 
 ## Prerequisites
 

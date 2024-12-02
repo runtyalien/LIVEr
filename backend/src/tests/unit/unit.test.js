@@ -1,7 +1,7 @@
-const { admin, db } = require('../config/firebase');
-const { client, getAsync, setAsync } = require('../redis');
-const { authenticateUser } = require('../middleware/auth');
-const { logger, loggerMiddleware } = require('../middleware/logger');
+const { admin, db } = require('../../config/firebase');
+const { client, getAsync, setAsync } = require('../../config/redis');
+const { authenticateUser } = require('../../middleware/auth');
+const { logger, loggerMiddleware } = require('../../middleware/logger');
 
 // Firebase Configuration Tests
 describe('Firebase Configuration', () => {
@@ -87,8 +87,8 @@ describe('Logger Middleware', () => {
 });
 
 // Product View Middleware Tests
-const { productViewController } = require('../middleware/productView');
-const { sendNotification } = require('../services/email');
+const { productViewController } = require('../../middleware/productview');
+const { sendNotification } = require('../../services/emailService');
 
 describe('Product View Middleware', () => {
   let mockReq, mockRes, mockNext;

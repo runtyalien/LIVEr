@@ -1,6 +1,6 @@
 const functions = require('firebase-functions');
 const admin = require('firebase-admin');
-const emailService = require('../services/email');
+const emailService = require('../services/emailService');
 const logger = require('../utils/logger');
 
 exports.onProductView = functions.firestore

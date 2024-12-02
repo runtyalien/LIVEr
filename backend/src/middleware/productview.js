@@ -1,5 +1,5 @@
 const { db } = require('../config/firebase');
-const { sendNotification } = require('../services/email');
+const { sendNotification } = require('../services/emailService');
 
 const productViewController = async (req, res, next) => {
   try {

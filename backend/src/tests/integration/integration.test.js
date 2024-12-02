@@ -1,7 +1,7 @@
 const request = require('supertest');
-const app = require('../app');
-const { admin } = require('../config/firebase');
-const { client } = require('../redis');
+const app = require('../../app');
+const { admin } = require('../../config/firebase');
+const { client } = require('../../config/redis');
 
 describe('Users API Integration', () => {
   let authToken, userId;

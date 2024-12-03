@@ -10,7 +10,15 @@ async function getRecentlyViewedProducts(userId) {
   }));
 }
 
-async function recordRecentlyViewedProduct(userId, productId, productName) {
+async function recordRecentlyViewedProduct(userId, productId) {
+
+  const productDoc = await db.collection('products').doc(productId).get();
+  if (!productDoc.exists) {
+    return res.status(404).json({ error: 'Product not found' });
+  }
+  const productData = productDoc.data();
+  const productName = productData.name;
+
   const userRef = db.collection('users').doc(userId);
   const recentlyViewedRef = userRef.collection('recentlyViewed');
 

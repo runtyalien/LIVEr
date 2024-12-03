@@ -4,10 +4,14 @@ const { fetchAllProducts, fetchProductById } = require('../services/productServi
 async function getAllProducts(req, res) {
   try {
     const cachedProducts = await getAsync('all_products');
-    if (cachedProducts) return res.json(JSON.parse(cachedProducts));
-
+    if (cachedProducts) {
+        console.log('fetching from redis...');
+        return res.json(JSON.parse(cachedProducts));
+    }
     const products = await fetchAllProducts();
     await setAsync('all_products', JSON.stringify(products), 'EX', 300);
+
+    console.log('fetching from firestore...');
 
     res.json(products);
   } catch (error) {

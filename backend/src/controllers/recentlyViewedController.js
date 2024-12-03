@@ -8,7 +8,10 @@ async function getRecentlyViewed(req, res) {
   try {
     const { userId } = req.params;
     const cachedData = await getAsync(`recentlyViewed:${userId}`);
-    if (cachedData) return res.json(JSON.parse(cachedData));
+    if (cachedData){
+      console.log(`fetching from redis...`);
+      return res.json(JSON.parse(cachedData));
+    }
 
     const products = await getRecentlyViewedProducts(userId);
     await setAsync(`recentlyViewed:${userId}`, JSON.stringify(products), 'EX', 300);

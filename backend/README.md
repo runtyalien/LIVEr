@@ -57,14 +57,7 @@ Before you begin, ensure you have the following:
 
 ## Installation
 
-### 1. Clone the Repository
-
-```bash
-git clone https://github.com/yourusername/product-view-microservice.git
-cd product-view-microservice
-```
-
-### 2. Install Dependencies
+### 1. Install Dependencies
 
 ```bash
 npm install
